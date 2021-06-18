@@ -6,6 +6,7 @@
     android:layout_height="wrap_content">
 
     <TextView
+        style="@style/TextViewStyle"
         android:id="@+id/titleTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,6 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        style="@style/TextViewStyle"
         android:id="@+id/descriptionTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,6 +27,7 @@
         app:layout_constraintTop_toBottomOf="@+id/titleTv" />
 
     <TextView
+        style="@style/TextViewStyle"
         android:id="@+id/timeTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,6 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/descriptionTv" />
 
     <TextView
+        style="@style/TextViewStyle"
         android:id="@+id/urlTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -65,6 +69,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnDelete" />
 
     <TextView
+        style="@style/TextViewStyle"
         android:id="@+id/dateTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

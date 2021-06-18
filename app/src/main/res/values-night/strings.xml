@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">boris_stojanovic_rn3518</string>
     <string name="add_event">Add Event</string>
     <string name="set_date">Set Date</string>
     <string name="event_title">Event Title</string>
@@ -9,17 +9,4 @@
     <string name="set_time">Set Time</string>
     <string name="enter_url">Enter Url</string>
     <string name="event_list">Event List</string>
-    <string-array name="priority">
-        <item>High</item>
-        <item>Medium</item>
-        <item>Low</item>
-    </string-array>
-    <string-array name="cities">
-        <item>Belgrade</item>
-        <item>Amsterdam</item>
-        <item>Budapest</item>
-        <item>Vienna</item>
-        <item>Rome</item>
-        <item>Berlin</item>
-    </string-array>
 </resources>

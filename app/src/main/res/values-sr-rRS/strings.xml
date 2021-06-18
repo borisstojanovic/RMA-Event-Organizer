@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">boris_stojanovic_rn3518</string>
+    <string name="add_event">Dodaj Dogadjaj</string>
+    <string name="set_date">Postavi Datum</string>
+    <string name="event_title">Naslov</string>
+    <string name="event_description">Opis</string>
+    <string name="check_time_for_location">Proveri vreme za lokaciju</string>
+    <string name="location">Lokacija</string>
+    <string name="set_time">Postavi Vreme</string>
+    <string name="enter_url">Unesi url</string>
+    <string name="event_list">Lista Dogadjaja</string>
+</resources>

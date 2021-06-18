@@ -6,27 +6,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
+    <android.widget.Button
+        style="@style/ButtonStyle"
         android:id="@+id/addEventSaveButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="50dp"
-        android:text="Add Event"
+        android:text="@string/add_event"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtUrl" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/datePickerButton"
-        style="?android:spinnerStyle"
+        style="@style/ButtonStyle"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="40dp"
-        android:text="Set Date"
-        android:textColor="@color/black"
+        android:layout_marginTop="25dp"
+        android:text="@string/set_date"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLocation" />
@@ -43,10 +43,11 @@
 
     <Spinner
         android:id="@+id/spinner"
+        style="@style/TextViewStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,13 +55,14 @@
 
     <EditText
         android:id="@+id/edtTitle"
+        style="@style/EditTextStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="20dp"
         android:ems="10"
-        android:hint="Event Title"
+        android:hint="@string/event_title"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,47 +70,51 @@
 
     <EditText
         android:id="@+id/edtDescription"
+        style="@style/EditTextStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="20dp"
         android:ems="10"
-        android:hint="Event Description"
+        android:hint="@string/event_description"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtTitle" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btnLocation"
+        style="@style/ButtonStyle"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_height="120dp"
         android:layout_marginStart="20dp"
-        android:hint="Check Time For Location"
+        android:text="@string/check_time_for_location"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/edtLocation" />
 
     <AutoCompleteTextView
         android:id="@+id/edtLocation"
+        style="@style/TextViewStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="20dp"
         android:ems="10"
-        android:hint="Location"
+        android:hint="@string/location"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnLocation"
         app:layout_constraintTop_toBottomOf="@+id/edtDescription" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btnSetTime"
+        style="@style/ButtonStyle"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginEnd="20dp"
-        android:text="Set Time"
+        android:text="@string/set_time"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/datePickerButton"
@@ -116,14 +122,15 @@
 
     <EditText
         android:id="@+id/edtUrl"
+        style="@style/EditTextStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:ems="10"
-        android:hint="Enter Url"
-        android:inputType="textPersonName"
+        android:hint="@string/enter_url"
+        android:inputType="textUri"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/spinner" />
