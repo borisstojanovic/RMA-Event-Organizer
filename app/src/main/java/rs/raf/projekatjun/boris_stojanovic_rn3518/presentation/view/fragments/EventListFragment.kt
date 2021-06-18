@@ -61,7 +61,7 @@ class EventListFragment : Fragment(R.layout.fragment_event_list) {
         }, {item ->
             val sendIntent: Intent = Intent().apply {
                 action = Intent.ACTION_SEND
-                putExtra(Intent.EXTRA_TEXT, item.title + "\n" + SimpleDateFormat("dd/MMM/yyyy").format(item.eventDate) + "\n" + SimpleDateFormat("HH:mm").format(item.eventTime))
+                putExtra(Intent.EXTRA_TEXT, item.title + "\n" + SimpleDateFormat("dd/MMM/yyyy").format(item.eventDate) + "\n" + SimpleDateFormat("HH:mm").format(item.eventDate))
                 type = "text/plain"
             }
 

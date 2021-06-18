@@ -22,8 +22,7 @@ class EventRepositoryImpl(
                         it.location,
                         it.priority,
                         it.url,
-                        it.eventDate,
-                        it.eventTime
+                        it.eventDate
                     )
                 }
             }
@@ -38,8 +37,7 @@ class EventRepositoryImpl(
                 event.location,
                 event.priority,
                 event.url,
-                event.eventDate,
-                event.eventTime
+                event.eventDate
             )
         return localDataSource
             .insert(eventEntity)
@@ -54,8 +52,7 @@ class EventRepositoryImpl(
                 event.location,
                 event.priority,
                 event.url,
-                event.eventDate,
-                event.eventTime
+                event.eventDate
             )
         return localDataSource
             .delete(eventEntity)

@@ -33,7 +33,7 @@ import java.util.*
 class AddEventFragment : Fragment(R.layout.fragment_add_event){
     private val mainViewModel: MainContract.ViewModel by sharedViewModel<MainViewModel>()
 
-    private lateinit var eventTime: Date
+    private var eventTime: Date? = null
 
     private var _binding: FragmentAddEventBinding? = null
     // This property is only valid between onCreateView and
@@ -92,16 +92,37 @@ class AddEventFragment : Fragment(R.layout.fragment_add_event){
         }
 
         binding.addEventSaveButton.setOnClickListener{
+            if(binding.edtTitle.text.isNullOrBlank() || binding.edtDescription.text.isNullOrBlank() || binding.edtUrl.text.isNullOrBlank() ||
+                    binding.edtLocation.text.isNullOrBlank() || eventTime == null || binding.datePickerButton.text.toString() == "Set Date"){
+                Toast.makeText(context, "All fields are required!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            val date = Date.from(this.makeDateFromString(binding.datePickerButton.text.toString()).
+            atStartOfDay(ZoneId.systemDefault()).toInstant())
+            val cal = Calendar.getInstance()
+            cal.timeInMillis = date.time;
+
+            val timeCalendar = Calendar.getInstance();
+            timeCalendar.timeInMillis = eventTime!!.time;
+
+            val year = cal.get(Calendar.YEAR);
+            val month = cal.get(Calendar.MONTH);
+            val day = cal.get(Calendar.DAY_OF_MONTH);
+
+            timeCalendar.set(Calendar.DAY_OF_MONTH, 1)
+            timeCalendar.set(Calendar.YEAR, year)
+            timeCalendar.set(Calendar.MONTH, month)
+            timeCalendar.set(Calendar.DAY_OF_MONTH, day)
+
             val temp: UUID = UUID.randomUUID()
             val eventToAdd = Event(
                 id = temp.mostSignificantBits + temp.leastSignificantBits,
                 title = binding.edtTitle.text.toString(),
                 priority = binding.spinner.selectedItem.toString(),
                 location = binding.edtLocation.text.toString(),
-                eventTime = eventTime,
                 description = binding.edtDescription.text.toString(),
-                eventDate = Date.from(this.makeDateFromString(binding.datePickerButton.text.toString()).
-                atStartOfDay(ZoneId.systemDefault()).toInstant()),
+                eventDate = timeCalendar.time,
                 url = binding.edtUrl.text.toString()
             )
             mainViewModel.addEvent(eventToAdd)

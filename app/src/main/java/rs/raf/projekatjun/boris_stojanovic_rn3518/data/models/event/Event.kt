@@ -10,5 +10,4 @@ data class Event(
     val priority: String,
     val url: String,
     val eventDate: Date,
-    val eventTime: Date
 )

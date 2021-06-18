@@ -15,5 +15,4 @@ data class EventEntity(
     val priority: String,
     val url: String,
     @ColumnInfo(name = "event_date")val eventDate: Date,
-    @ColumnInfo(name = "event_time")val eventTime: Date
 )
