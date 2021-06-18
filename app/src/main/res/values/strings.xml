@@ -21,5 +21,27 @@
         <item>Vienna</item>
         <item>Rome</item>
         <item>Berlin</item>
+        <item>Andorra</item>
+        <item>Athens</item>
+        <item>Astrakhan</item>
+        <item>Brussels</item>
+        <item>Bucharest</item>
+        <item>Budapest</item>
+        <item>Chisinau</item>
+        <item>Copenhagen</item>
+        <item>Dublin</item>
+        <item>Gibraltar</item>
+        <item>Helsinki</item>
+        <item>Istanbul</item>
+        <item>Kaliningrad</item>
+        <item>Kiev</item>
+        <item>Kirov</item>
+        <item>Lisbon</item>
+        <item>London</item>
+        <item>Luxembourg</item>
+        <item>Madrid</item>
+        <item>Malta</item>
+        <item>Minsk</item>
+        <item>Monaco</item>
     </string-array>
 </resources>
